@@ -25,7 +25,7 @@
 <body class="dark-theme">
 
     <!-- Splash Screen -->
-    <div id="splash-screen" style="position:fixed;inset:0;z-index:9999;background:var(--bg-primary,#0d0d1a);">
+    <div id="splash-screen">
         <div class="splash-container">
             <div class="splash-image-side">
                 <div class="splash-image-aura"></div>
@@ -106,7 +106,7 @@
                         rel="noopener noreferrer" class="social-circle">
                         <i class="ph ph-linkedin-logo"></i>
                     </a>
-                    <a href="/cdn-cgi/l/email-protection#a2d1c3ccd6cacdd1cad1d7c6cac3c9c3d0929be2c5cfc3cbce8cc1cdcf" class="social-circle">
+                    <a href="/cdn-cgi/l/email-protection#ccbfada2b8a4a3bfa4bfb9a8a4ada7adbefcf58caba1ada5a0e2afa3a1" class="social-circle">
                         <i class="ph ph-envelope-simple"></i>
                     </a>
                     <a href="https://github.com/santhosh090705" target="_blank" rel="noopener noreferrer"
@@ -757,7 +757,6 @@
                     data-cert="assets/certificates/Protothon-2K25-Certificate.png"
                     style="flex-direction: column; align-items: flex-start; gap: 14px; cursor: pointer;">
 
-                    <!-- Header -->
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%; flex-wrap: wrap; gap: 10px;">
                         <div style="display: flex; align-items: flex-start; gap: 14px;">
                             <i class="ph ph-trophy" style="font-size: 2rem; margin-top: 2px;"></i>
@@ -769,7 +768,6 @@
                         <span class="pipeline-badge">4th &amp; 5th Dec 2025</span>
                     </div>
 
-                    <!-- Project -->
                     <div style="padding-left: 46px; width: 100%;">
                         <p style="margin: 0 0 6px; opacity: 0.6; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px;">Project Built</p>
                         <p style="margin: 0 0 10px; font-weight: 600;">Cloud-Based Digital Twin Dashboard for Real-Time EV Battery Range Prediction</p>
@@ -786,7 +784,6 @@
                         </div>
                     </div>
 
-                    <!-- Footer -->
                     <div style="padding-left: 46px; width: 100%; display: flex; align-items: center; gap: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.07);">
                         <i class="ph ph-seal-check" style="font-size: 1.1rem;"></i>
                         <span style="font-size: 0.85rem; opacity: 0.8;">Certificate of Participation &mdash; Click card to view</span>
@@ -851,8 +848,8 @@
                 <p>Building intelligent, real-world solutions.</p>
             </div>
             <div class="contact-info">
-                <a href="/cdn-cgi/l/email-protection#6d1e0c031905021e051e1809050c060c1f5d542d0a000c0401430e0200"><i class="ph ph-envelope-simple"></i>
-                    <span class="__cf_email__" data-cfemail="0576646b716d6a766d7670616d646e6477353c456268646c692b666a68">[email&#160;protected]</span></a>
+                <a href="/cdn-cgi/l/email-protection#4f3c2e213b27203c273c3a2b272e242e3d7f760f28222e2623612c2022"><i class="ph ph-envelope-simple"></i>
+                    <span class="__cf_email__" data-cfemail="76051718021e19051e0503121e171d1704464f36111b171f1a5815191b">[email&#160;protected]</span></a>
                 <span><i class="ph ph-phone"></i> +91 9444204260</span>
                 <span><i class="ph ph-map-pin"></i> Chennai, India</span>
             </div>
@@ -969,3 +966,61 @@
             </div>
             <div class="synapse-spark" style="--top: 52%; --left: 60%; --rot: 15deg; --delay: 1.6s; --dur: 3.9s;"></div>
             <div class="synapse-spark" style="--top: 92%; --left: 45%; --rot: 70deg; --delay: 0.4s; --dur: 5.3s;"></div>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+            <img class="modal-content" id="modal-img" style="display: none;">
+            <iframe class="modal-content" id="modal-pdf" style="display: none;" frameborder="0"></iframe>
+        </div>
+        <div id="modal-caption"></div>
+    </div>
+
+    <!-- Chat Assistant Widget -->
+    <div class="chat-widget">
+        <button class="chat-toggle" aria-label="Toggle Chat Assistant">
+            <i class="ph ph-chat-centered-text"></i>
+        </button>
+
+        <div class="chat-window">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <i class="ph ph-sparkle"></i>
+                    <div>
+                        <h4>Santhosh's Assistant</h4>
+                        <span>Powered by AI</span>
+                    </div>
+                </div>
+                <button class="chat-close"><i class="ph ph-x"></i></button>
+            </div>
+
+            <div class="chat-body" id="chat-body">
+                <div class="chat-welcome">
+                    <p>Try asking me something:</p>
+                    <div class="chat-suggestions">
+                        <button class="suggestion-chip">What are Santhosh's top skills?</button>
+                        <button class="suggestion-chip">Tell me about the Hunger Bot project.</button>
+                        <button class="suggestion-chip">Describe his internship experience.</button>
+                        <button class="suggestion-chip">How can I contact Santhosh?</button>
+                    </div>
+                </div>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message assistant">
+                        Hi! I'm Santhosh's AI assistant. Ask me anything about his skills, projects, or experience! 🚀
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-footer">
+                <input type="text" id="chat-input" placeholder="Ask me anything...">
+                <button id="chat-send"><i class="ph ph-paper-plane-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
